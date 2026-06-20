@@ -1,0 +1,48 @@
+
+> my-app1@0.1.0 dev
+> next dev --turbopack
+
+   ▲ Next.js 15.5.9 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.22:3000
+
+ ✓ Starting...
+ ✓ Compiled middleware in 105ms
+ ✓ Ready in 1176ms
+ ○ Compiling /login ...
+ ✓ Compiled /login in 2.8s
+ GET /login 200 in 3216ms
+ ○ Compiling /classes/[id] ...
+ ✓ Compiled /classes/[id] in 546ms
+ GET /classes/2 200 in 1097ms
+ GET /classes/2 200 in 138ms
+ GET /classes/2 200 in 134ms
+ GET /classes/2 200 in 170ms
+ GET /classes/2 200 in 141ms
+ HEAD /classes/2 200 in 152ms
+ ✓ Compiled /admin/assignments in 479ms
+ GET /admin/assignments 200 in 612ms
+ ✓ Compiled /favicon.ico in 226ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 519ms
+ ✓ Compiled /admin in 445ms
+ GET /admin 200 in 496ms
+ ○ Compiling /admin/users ...
+ ✓ Compiled /admin/users in 515ms
+ GET /admin/users 200 in 577ms
+ ○ Compiling /admin/verification ...
+ ✓ Compiled /admin/verification in 674ms
+ GET /admin/verification 200 in 736ms
+ ✓ Compiled /admin/classes in 366ms
+ GET /admin/classes 200 in 426ms
+ GET /admin/assignments 200 in 68ms
+ ✓ Compiled /admin/analytics in 493ms
+ GET /admin/analytics 200 in 548ms
+ ✓ Compiled /admin/logs in 366ms
+ GET /admin/logs 200 in 421ms
+ ✓ Compiled /admin/notifications in 340ms
+ GET /admin/notifications 200 in 389ms
+ ✓ Compiled /admin/settings in 396ms
+ GET /admin/settings 200 in 449ms
+ GET /admin 200 in 60ms
+ HEAD /favicon.ico 200 in 249ms
+[?25h
