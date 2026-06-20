@@ -45,7 +45,9 @@ const ClassCard = ({ id, name, teacher_name, student_count, total_assignments, c
       <div 
         className="h-32 w-full bg-cover bg-center relative shrink-0"
         style={{ 
-          backgroundImage: cover_image ? `url(${baseUrl}${cover_image})` : 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%)' 
+          backgroundImage: cover_image 
+            ? `url(${cover_image.startsWith('http') ? cover_image : `${baseUrl}${cover_image}`})` 
+            : 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%)' 
         }}
       >
         {!cover_image && (
