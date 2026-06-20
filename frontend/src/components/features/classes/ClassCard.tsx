@@ -38,12 +38,14 @@ const ClassCard = ({ id, name, teacher_name, student_count, total_assignments, c
     ? Math.round(((completed_assignments || 0) / total_assignments) * 100) 
     : 0;
 
+  const baseUrl = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5002').replace('/api', '');
+
   return (
     <div className="bg-white rounded-md shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col overflow-hidden">
       <div 
         className="h-32 w-full bg-cover bg-center relative shrink-0"
         style={{ 
-          backgroundImage: cover_image ? `url(http://localhost:5002${cover_image})` : 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%)' 
+          backgroundImage: cover_image ? `url(${baseUrl}${cover_image})` : 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%)' 
         }}
       >
         {!cover_image && (

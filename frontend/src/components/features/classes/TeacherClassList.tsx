@@ -76,6 +76,8 @@ const ClassList = () => {
     return () => document.removeEventListener('click', handleClickOutside);
   }, []);
 
+  const baseUrl = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5002').replace('/api', '');
+
   return (
       <DashboardLayout navItems={navItems} title="Instructor Portal">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
@@ -125,7 +127,7 @@ const ClassList = () => {
           <div key={item.id} className="bg-white rounded-md shadow-sm border border-gray-100 overflow-hidden group hover:shadow-xl transition-all duration-300 relative flex flex-col">
             <div 
               className={`h-32 ${item.is_active === 0 || item.is_active === false ? 'bg-gray-500' : 'bg-blue-500'} p-6 relative bg-cover bg-center shrink-0`}
-              style={item.cover_image ? { backgroundImage: `url(http://localhost:5002${item.cover_image})` } : undefined}
+              style={item.cover_image ? { backgroundImage: `url(${baseUrl}${item.cover_image})` } : undefined}
             >
               {item.cover_image && <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors"></div>}
               <div className="absolute right-4 top-4 z-10">

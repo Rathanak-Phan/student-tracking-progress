@@ -35,6 +35,8 @@ const AssignmentDetailsView = () => {
     open: false, type: 'error', title: '', message: ''
   });
 
+  const baseUrl = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5002').replace('/api', '');
+
   useEffect(() => {
     fetchAssignment();
   }, [assignmentId]);
@@ -191,7 +193,7 @@ const AssignmentDetailsView = () => {
                           </div>
                         </div>
                         <a 
-                          href={`http://localhost:5002${submission.file_path}`} 
+                          href={`${baseUrl}${submission.file_path}`} 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="text-xs font-bold text-blue-600 hover:text-blue-800 whitespace-nowrap ml-4 bg-blue-50 px-3 py-1.5 rounded-md hover:bg-blue-100 transition-colors"
@@ -236,7 +238,7 @@ const AssignmentDetailsView = () => {
                           </div>
                         </div>
                         <a 
-                          href={`http://localhost:5002${submission.file_path}`} 
+                          href={`${baseUrl}${submission.file_path}`} 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="text-xs font-bold text-blue-600 hover:text-blue-800 whitespace-nowrap ml-4 bg-blue-50 px-3 py-1.5 rounded-md hover:bg-blue-100 transition-colors"
